@@ -2,7 +2,7 @@
 // import propOverrides from './propOverrides';''
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
-import { styled } from '@apollosproject/ui-kit';
+import { styled, withTheme, Icon } from '@apollosproject/ui-kit';
 import fonts from './fonts';
 import { UIConnectedOverrides } from './overrides';
 
@@ -119,6 +119,19 @@ const HalfScreenImage = styled({
   height: '50%',
 })(Image);
 
+const BrandIcon = withTheme(
+  ({ theme, color }) => ({
+    name: 'brand-icon',
+    paddingRight: '100%',
+    size: '70px',
+    ...(color ? { fill: color } : {}),
+    style: {
+      marginBottom: theme.sizing.baseUnit,
+    },
+  }),
+  'ui-onboarding.Features.BrandIcon'
+)(Icon);
+
 const overrides = {
   H1: {
     fontFamily: typography.sans.black.default,
@@ -141,22 +154,24 @@ const overrides = {
   ...UIConnectedOverrides({ lightColors, darkColors }),
 
   // Onboarding
-  'ui-onboarding.Landing.Title': {
+  'ui-onboarding.Features.Title': {
     textAlign: 'center',
   },
-  'ui-onboarding.Landing.Subtitle': {
+  'ui-onboarding.Features.Subtitle': {
     textAlign: 'center',
     fontWeight: '900',
     marginBottom: '70%',
   },
-  'ui-onboarding.Landing.BrandIcon': {
+  'ui-onboarding.Features.Icon': {
     paddingRight: '100%',
     size: '70px',
+    Icon: () => <BrandIcon source={require('../../assets/crossings.png')} />,
   },
-  'ui-onboarding.Landing': {
+  'ui-onboarding.Features': {
     slideTitle: "We're glad you're here!",
     description: 'Live By Faith. Be A Voice Of Hope. Be Known By Love.',
     textColor: 'white',
+    Icon: () => <BrandIcon source={require('../../assets/crossings.png')} />,
     // eslint-disable-next-line react/display-name
     BackgroundComponent: () => (
       <FullScreenImage source={require('../../assets/Landing.png')} />
@@ -168,19 +183,19 @@ const overrides = {
   'ui-onboarding.Slide.SlideContent.Description': {
     textAlign: 'center',
   },
-  'ui-onboarding.Features': {
-    description:
-      "We'd like to help personalize your profile to make the most of your online experience.",
-    // eslint-disable-next-line react/display-name
-    BackgroundComponent: () => (
-      // eslint-disable-next-line react/react-in-jsx-scope
-      <Image
-        alignSelf={'center'}
-        marginTop={'15%'}
-        source={require('../../assets/Welcome.png')}
-      />
-    ),
-  },
+  // 'ui-onboarding.Features': {
+  //   description:
+  //     "We'd like to help personalize your profile to make the most of your online experience.",
+  //   // eslint-disable-next-line react/display-name
+  //   BackgroundComponent: () => (
+  //     // eslint-disable-next-line react/react-in-jsx-scope
+  //     <Image
+  //       alignSelf={'center'}
+  //       marginTop={'15%'}
+  //       source={require('../../assets/Welcome.png')}
+  //     />
+  //   ),
+  // },
   'ui-onboarding.LocationFinder': {
     description:
       "We'll use your location to connect you with your nearby campus and community.",

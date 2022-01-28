@@ -15,5 +15,18 @@ export default gql`
         }
       }
     }
+    allGroups {
+      id
+      htmlContent
+      title
+      location
+      start
+      end
+      coverImage {
+        sources {
+          uri
+        }
+      }
+    }
   }
 `;

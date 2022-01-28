@@ -92,7 +92,7 @@ const HomeTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
     headerCenter: HeaderLogo,
-    headerRight: SearchButton,
+    // headerRight: SearchButton,
     headerLeft: ProfileButton,
     headerLargeTitle: false,
   },
@@ -109,7 +109,7 @@ const ReadTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
     headerCenter: HeaderLogo,
-    headerRight: SearchButton,
+    // headerRight: SearchButton,
     headerLeft: ProfileButton,
     headerLargeTitle: false,
   },
@@ -121,7 +121,7 @@ const WatchTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
     headerCenter: HeaderLogo,
-    headerRight: SearchButton,
+    // headerRight: SearchButton,
     headerLeft: ProfileButton,
     headerLargeTitle: false,
   },
@@ -133,7 +133,7 @@ const GiveTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
     headerLeft: ProfileButton,
-    headerRight: SearchButton,
+    // headerRight: SearchButton,
     headerCenter: HeaderLogo,
     headerLargeTitle: false,
   },
@@ -164,7 +164,7 @@ const ConnectTabStackNavigator = () => (
       headerHideShadow: true,
       headerLargeTitle: false,
       headerCenter: HeaderLogo,
-      headerRight: SearchButton,
+      // headerRight: SearchButton,
       headerLeft: ProfileButton,
     }}
   >

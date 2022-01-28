@@ -55,7 +55,7 @@ const StyledCardTitle = styled(({ theme }) => ({
   color: theme.colors.text.primary,
 }))(H3);
 
-const Label = styled(({ theme }) => ({ color: theme.colors.quaternary }))(H4);
+const Label = styled(({ theme }) => ({ color: theme.colors.gray }))(H4);
 
 const CurrentCampus = withIsLoading(
   ({
