@@ -1,3 +1,22 @@
+diff --git a/node_modules/@apollosproject/ui-kit/src/FollowList/FollowListItem/index.js b/node_modules/@apollosproject/ui-kit/src/FollowList/FollowListItem/index.js
+index ea864fd..823f4e2 100644
+--- a/node_modules/@apollosproject/ui-kit/src/FollowList/FollowListItem/index.js
++++ b/node_modules/@apollosproject/ui-kit/src/FollowList/FollowListItem/index.js
+@@ -77,12 +77,12 @@ const FollowListItem = ({
+           type="primary"
+           onPress={onFollow}
+         >
+-          <H6>{requestingFollow ? 'Requested' : 'Follow'}</H6>
++          <H6>{requestingFollow ? 'Requested' : 'Connect'}</H6>
+         </StyledButton>
+       )}
+       {confirmedFollowing && (
+         <StyledButton disabled pill={false} type="default">
+-          <H6>Following</H6>
++          <H6>Connected</H6>
+         </StyledButton>
+       )}
+     </Cell>
 diff --git a/node_modules/@apollosproject/ui-kit/src/FollowListSearch/FollowListSearchModal.js b/node_modules/@apollosproject/ui-kit/src/FollowListSearch/FollowListSearchModal.js
 index f771ac2..d74db36 100644
 --- a/node_modules/@apollosproject/ui-kit/src/FollowListSearch/FollowListSearchModal.js
@@ -11,3 +30,7 @@ index f771ac2..d74db36 100644
    onSearch: () => {},
    open: false,
  };
+diff --git a/node_modules/@apollosproject/ui-kit/src/theme/icons/.DS_Store b/node_modules/@apollosproject/ui-kit/src/theme/icons/.DS_Store
+new file mode 100644
+index 0000000..7aa502d
+Binary files /dev/null and b/node_modules/@apollosproject/ui-kit/src/theme/icons/.DS_Store differ
