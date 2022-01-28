@@ -15,13 +15,13 @@ const Toolbar = () => (
         <ActionBar title="Test">
           <ActionBarItem
             onPress={() =>
-              openUrl('https://crossings.church/locations/okc/serve/')
+              openUrl('https://app.crossings.church/locations/okc/serve/')
             }
             icon="hand-shake"
             label="Volunteer"
           />
           <ActionBarItem
-            onPress={() => openUrl('https://crossings.church/group-finder')}
+            onPress={() => openUrl('https://app.crossings.church/group-finder')}
             icon="find-group"
             label="Find A Group"
           />
