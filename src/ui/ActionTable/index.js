@@ -86,7 +86,7 @@ const ActionTable = () => (
         </RowHeader>
         <TableView>
           <Touchable
-            onPress={() => openUrl('https://crossings.church/contact-us')}
+            onPress={() => openUrl('https://app.crossings.church/contact-us')}
           >
             <Cell>
               <CellText>Contact Us</CellText>
@@ -96,7 +96,7 @@ const ActionTable = () => (
           <Divider />
 
           <Touchable
-            onPress={() => openUrl('https://crossings.church/locations')}
+            onPress={() => openUrl('https://app.crossings.church/locations')}
           >
             <Cell>
               <CellText>Locations & Times</CellText>
