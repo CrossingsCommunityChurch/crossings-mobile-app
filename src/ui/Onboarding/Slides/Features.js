@@ -12,6 +12,8 @@ const Features = memo(
       <SlideContent
         icon={Icon}
         title={"We're Glad You're Here."}
+        colorTitle={'#fff'}
+        colorSub={'#DBDBD9'}
         description={description}
       />
     </Slide>

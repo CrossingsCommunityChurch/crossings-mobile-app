@@ -23,6 +23,7 @@ const lightColors = {
   text: {
     tertiary: '#bd9a5f',
     action: '#236092',
+    icon: 'white',
   },
   action: {
     primary: '#bd9a5f',
@@ -37,6 +38,7 @@ const darkColors = {
   text: {
     tertiary: '#bd9a5f',
     action: '#236092',
+    icon: 'white',
   },
   action: {
     primary: '#d4aa67',
@@ -122,12 +124,6 @@ const HalfScreenImage = styled({
 const BrandIcon = withTheme(
   ({ theme, color }) => ({
     name: 'brand-icon',
-    paddingRight: '100%',
-    size: '70px',
-    ...(color ? { fill: color } : {}),
-    style: {
-      marginBottom: theme.sizing.baseUnit,
-    },
   }),
   'ui-onboarding.Features.BrandIcon'
 )(Icon);
@@ -161,11 +157,6 @@ const overrides = {
     textAlign: 'center',
     fontWeight: '900',
     marginBottom: '70%',
-  },
-  'ui-onboarding.Features.Icon': {
-    paddingRight: '100%',
-    size: '70px',
-    Icon: () => <BrandIcon source={require('../../assets/crossings.png')} />,
   },
   'ui-onboarding.Features': {
     slideTitle: "We're glad you're here!",
