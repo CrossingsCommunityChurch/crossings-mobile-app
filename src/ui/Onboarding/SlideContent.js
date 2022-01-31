@@ -22,8 +22,8 @@ const IconWrapper = styled(
 const BrandIcon = withTheme(
   ({ theme, icon }) => ({
     name: typeof icon === 'string' ? icon : 'brand-icon',
-    size: theme.sizing.baseUnit * 12,
-    fill: theme.colors.text.primary,
+    size: theme.sizing.baseUnit * 11,
+    fill: theme.colors.text.icon,
   }),
   'ui-onboarding.Slide.SlideContent.BrandIcon'
 )(Icon);
@@ -36,16 +36,16 @@ const TitleWrapper = styled(
 )(View);
 
 const Title = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.primary,
+  ({ theme, color }) => ({
+    color: color ? color : theme.colors.text.primary,
     textAlign: 'center',
   }),
   'ui-onboarding.Slide.SlideContent.Title'
 )(H3);
 
 const Description = styled(
-  ({ theme }) => ({
-    color: theme.colors.text.secondary,
+  ({ theme, color }) => ({
+    color: color ? color : theme.colors.text.secondary,
     textAlign: 'center',
   }),
   'ui-onboarding.Slide.SlideContent.Description'
@@ -63,7 +63,16 @@ const Wrapper = styled(
 )(SafeAreaView);
 
 const SlideContent = withIsLoading(
-  ({ icon, title, description, children, isLoading, ...props }) => {
+  ({
+    icon,
+    title,
+    description,
+    children,
+    isLoading,
+    colorTitle,
+    colorSub,
+    ...props
+  }) => {
     if (!icon && !title && !description && !children) {
       console.warn(
         `Warning: You need to pass at least one prop for SlideContent to render something cowboy.`
@@ -79,9 +88,9 @@ const SlideContent = withIsLoading(
             </IconWrapper>
           ) : null}
           <TitleWrapper>
-            <Title>{title}</Title>
+            <Title color={colorTitle}>{title}</Title>
           </TitleWrapper>
-          <Description>{description}</Description>
+          <Description color={colorSub}>{description}</Description>
         </View>
         {children}
       </Wrapper>
@@ -96,6 +105,8 @@ SlideContent.propTypes = {
     PropTypes.bool, // Use default `brand-icon`
     PropTypes.string, // Use a custom icon name
   ]),
+  colorTitle: PropTypes.string,
+  colorSub: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   children: PropTypes.oneOfType([
