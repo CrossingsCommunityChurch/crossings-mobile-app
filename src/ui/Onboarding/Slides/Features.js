@@ -48,4 +48,4 @@ Features.defaultProps = {
     "We're Excited To Start This Journey To Overflow Our City With Kindness.",
 };
 
-export default named('ui-onboarding.Features')(Features);
+export default named('ui-onboarding.LandingFeatures')(Features);

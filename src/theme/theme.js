@@ -158,10 +158,9 @@ const overrides = {
     fontWeight: '900',
     marginBottom: '70%',
   },
-  'ui-onboarding.Features': {
+  'ui-onboarding.LandingFeatures': {
     slideTitle: "We're glad you're here!",
     description: 'Live By Faith. Be A Voice Of Hope. Be Known By Love.',
-    textColor: 'white',
     Icon: () => <BrandIcon source={require('../../assets/crossings.png')} />,
     // eslint-disable-next-line react/display-name
     BackgroundComponent: () => (
@@ -174,19 +173,19 @@ const overrides = {
   'ui-onboarding.Slide.SlideContent.Description': {
     textAlign: 'center',
   },
-  // 'ui-onboarding.Features': {
-  //   description:
-  //     "We'd like to help personalize your profile to make the most of your online experience.",
-  //   // eslint-disable-next-line react/display-name
-  //   BackgroundComponent: () => (
-  //     // eslint-disable-next-line react/react-in-jsx-scope
-  //     <Image
-  //       alignSelf={'center'}
-  //       marginTop={'15%'}
-  //       source={require('../../assets/Welcome.png')}
-  //     />
-  //   ),
-  // },
+  'ui-onboarding.Features': {
+    description:
+      "We'd like to help personalize your profile to make the most of your online experience.",
+    // eslint-disable-next-line react/display-name
+    BackgroundComponent: () => (
+      // eslint-disable-next-line react/react-in-jsx-scope
+      <Image
+        alignSelf={'center'}
+        marginTop={'15%'}
+        source={require('../../assets/Welcome.png')}
+      />
+    ),
+  },
   'ui-onboarding.LocationFinder': {
     description:
       "We'll use your location to connect you with your nearby campus and community.",
