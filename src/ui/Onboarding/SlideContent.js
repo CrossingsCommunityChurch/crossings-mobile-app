@@ -22,8 +22,8 @@ const IconWrapper = styled(
 const BrandIcon = withTheme(
   ({ theme, icon }) => ({
     name: typeof icon === 'string' ? icon : 'brand-icon',
-    size: theme.sizing.baseUnit * 12,
-    fill: theme.colors.text.primary,
+    size: theme.sizing.baseUnit * 11,
+    fill: theme.colors.text.icon,
   }),
   'ui-onboarding.Slide.SlideContent.BrandIcon'
 )(Icon);
@@ -37,7 +37,7 @@ const TitleWrapper = styled(
 
 const Title = styled(
   ({ theme }) => ({
-    color: theme.colors.text.primary,
+    color: theme.colors.text.icon,
     textAlign: 'center',
   }),
   'ui-onboarding.Slide.SlideContent.Title'
@@ -45,7 +45,7 @@ const Title = styled(
 
 const Description = styled(
   ({ theme }) => ({
-    color: theme.colors.text.secondary,
+    color: theme.colors.text.landingSub,
     textAlign: 'center',
   }),
   'ui-onboarding.Slide.SlideContent.Description'
