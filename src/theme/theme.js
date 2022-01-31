@@ -24,7 +24,6 @@ const lightColors = {
     tertiary: '#bd9a5f',
     action: '#236092',
     icon: 'white',
-    landingSub: '#DBDBD9',
   },
   action: {
     primary: '#bd9a5f',
@@ -40,7 +39,6 @@ const darkColors = {
     tertiary: '#bd9a5f',
     action: '#236092',
     icon: 'white',
-    landingSub: '#DBDBD9',
   },
   action: {
     primary: '#d4aa67',
