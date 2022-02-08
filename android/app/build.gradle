@@ -156,8 +156,8 @@ android {
         applicationId "church.crossings.rockapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 155
-        versionName "2.1.0"
+        versionCode 29
+        versionName "2.1.1"
         ndk {
             abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
