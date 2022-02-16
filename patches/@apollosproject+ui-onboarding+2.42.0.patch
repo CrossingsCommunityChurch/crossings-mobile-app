@@ -11,3 +11,37 @@ index 70f98ee..679a6d2 100644
    ];
    const { data, loading } = useQuery(WITH_USER_ID, {
      fetchPolicy: 'network-only',
+diff --git a/node_modules/@apollosproject/ui-onboarding/src/Slide/SlideContent/index.js b/node_modules/@apollosproject/ui-onboarding/src/Slide/SlideContent/index.js
+index b018e46..0a1ff2b 100644
+--- a/node_modules/@apollosproject/ui-onboarding/src/Slide/SlideContent/index.js
++++ b/node_modules/@apollosproject/ui-onboarding/src/Slide/SlideContent/index.js
+@@ -1,16 +1,19 @@
+ import React from 'react';
+-import { View } from 'react-native';
++import { View, Dimensions } from 'react-native';
+ import {
+   styled,
+   withTheme,
+   Icon,
+   H2,
++  H3,
+   H5,
+   withIsLoading,
+ } from '@apollosproject/ui-kit';
+ import PropTypes from 'prop-types';
+ import { SafeAreaView } from 'react-native-safe-area-context';
+ 
++const headingSize = Dimensions.get('window').height < 830 ? H3 : H2;
++
+ const IconWrapper = styled(
+   ({ theme }) => ({
+     paddingBottom: theme.sizing.baseUnit, // wrapper is used to padd placeholder as well.
+@@ -39,7 +42,7 @@ const Title = styled(
+     color: theme.colors.primary,
+   }),
+   'ui-onboarding.Slide.SlideContent.Title'
+-)(H2);
++)(headingSize);
+ 
+ const Description = styled(
+   ({ theme }) => ({
